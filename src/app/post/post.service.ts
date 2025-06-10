@@ -7,11 +7,11 @@ import { stringify } from "uuid";
 import jasmine from "jasmine";
 
 /*
- we will write and call all web services. we will create getAll(), 
- create(), find(), update() and delete().
+ Reusable class that holds logic 
+ or data you want to share across components
 
-we are using https://jsonplaceholder.typicode.com web site api for now. 
-they provide to easily use. 
+we are using https://jsonplaceholder.typicode.com 
+web site api for now they provide to easily use. 
 */
 
 @Injectable({
@@ -38,6 +38,19 @@ export class PostService {
   /*------------------------------------------
   --------------------------------------------
   Created constructor
+
+  In Angular, if you want to use a service — 
+  either built-in (like HttpClient, Router) or 
+  custom (like your PostService) —
+  you must inject it into the constructor.
+
+  That’s how Angular’s Dependency Injection (DI) system works.
+
+  HttpClient is a service class, not a utility function.
+  It must be created by Angular, with all its dependencies 
+  resolved.
+  You ask for it in the constructor, and Angular’s 
+  Dependency Injection system gives you a ready-to-use instance.
   --------------------------------------------
   --------------------------------------------*/
 

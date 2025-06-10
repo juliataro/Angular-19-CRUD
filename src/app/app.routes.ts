@@ -7,6 +7,7 @@ import { EditComponent } from "./post/edit/edit.component";
 // Routes
 
 export const routes: Routes = [
+  { path: "", redirectTo: "post/index", pathMatch: "full" },
   { path: "post", redirectTo: "post/index", pathMatch: "full" },
   { path: "post/index", component: IndexComponent },
   { path: "post/create", component: CreateComponent },

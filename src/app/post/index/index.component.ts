@@ -1,11 +1,54 @@
-import { Component } from '@angular/core';
+/*
+List Page Template and Component
+*/
+
+// CommonModule -basic module that contains Angular Directives and pipes
+import { CommonModule } from "@angular/common";
+import { Component } from "@angular/core";
+import { RouterModule } from "@angular/router";
+import { Post } from "../post";
+import { PostService } from "../post.service";
 
 @Component({
-  selector: 'app-index',
-  imports: [],
-  templateUrl: './index.component.html',
-  styleUrl: './index.component.css'
+  selector: "app-index",
+  standalone: true, // Can exist without NgModule
+  imports: [CommonModule, RouterModule],
+  templateUrl: "./index.component.html",
+  styleUrl: "./index.component.css",
 })
 export class IndexComponent {
+  // Interface
+  posts: Post[] = [];
 
+  /*------------------------------------------
+  --------------------------------------------
+  To Use Services should be used constructor
+  --------------------------------------------
+  --------------------------------------------*/
+
+  constructor(public PostService: PostService) {}
+
+  /**
+   * ngOnInit method that is called when component is
+   * initialized and saves it to the property posts that was already initialized
+   **/
+  ngOnInit(): void {
+    this.PostService.getAll().subscribe((data: Post[]) => {
+      this.posts = data;
+      console.log(this.posts);
+    });
+  }
+
+  /**
+   * Write the code
+   *
+   * Delete Poat
+   * **/
+
+  deletePost(id: number) {
+    this.PostService.delete(id).subscribe((res) => {
+      this.posts = this.posts.filter((item) => item.id !== id);
+      console.log("Post deleted successfully!");
+    });
+  }
 }
