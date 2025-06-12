@@ -22,10 +22,11 @@ export class CreateComponent {
   constructor(public postService: PostService, private router: Router) {}
 
   /**
-   * Form with Validators
-   * this.form.controls — is object, that consists all fields
-   *  (title, body) в виде экземпляров FormControl.
+   * Form with Validators this.form.controls — is object,
+   * that consists all fields (title, body) like exemplars
+   * of FormControl.
    *
+   * ngOnInit - is hook for loading data, initialization, asinc state
    * */
 
   ngOnInit(): void {
@@ -38,10 +39,7 @@ export class CreateComponent {
   }
 
   /**
-   * Form with Validators
-   * this.form.controls — is object, that consists all fields
-   *  (title, body) в виде экземпляров FormControl.
-   * TypeScript Getter f function allows convenient access to the them
+   * TypeScript Getter allows convenient access fot html file
    */
   get f() {
     return this.form.controls;

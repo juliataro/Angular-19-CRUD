@@ -12,6 +12,7 @@ import { PostService } from "../post.service";
 @Component({
   selector: "app-index",
   standalone: true, // Can exist without NgModule
+  // CommonModule exports basic directives and pipes
   imports: [CommonModule, RouterModule],
   templateUrl: "./index.component.html",
   styleUrl: "./index.component.css",
@@ -22,7 +23,8 @@ export class IndexComponent {
 
   /*------------------------------------------
   --------------------------------------------
-  To Use Services should be used constructor
+  To Use Services , something outside from a class 
+  should be in the constructor
   --------------------------------------------
   --------------------------------------------*/
 

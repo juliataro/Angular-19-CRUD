@@ -18,7 +18,7 @@ web site api for now they provide to easily use.
   providedIn: "root",
 })
 export class PostService {
-  private apiURL = "https://jsonplaceholder.typicode.com";
+  private apiURL = "http://localhost:8000";
 
   /*---------------------------------------------
   -----------------------------------------------
