@@ -61,3 +61,9 @@ For more information on using the Angular CLI, including detailed command refere
 ## Tutorial link
 
 https://www.itsolutionstuff.com/post/angular-19-crud-application-tutorial-exampleexample.html#google_vignette
+
+## To Run the database
+
+npm i json-server
+
+npx json-server --watch db/db.json --port 8000
