@@ -1,0 +1,16 @@
+.container {
+  margin-top: 100px;
+}
+
+.update-post {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.btn {
+  padding: 10px 32px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}

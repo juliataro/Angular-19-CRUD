@@ -1,7 +1,8 @@
 <div class="container">
-  <h1>Create new Post</h1>
-
-  <a href="#" routerLink="/post/index" class="btn btn-primary">Back</a>
+  <div class="create-post">
+    <h2>Create new Post</h2>
+    <a href="#" routerLink="/post/index" class="btn btn-primary">Back</a>
+  </div>
 
   <form [formGroup]="form" (ngSubmit)="submit()">
     <div class="form-group">

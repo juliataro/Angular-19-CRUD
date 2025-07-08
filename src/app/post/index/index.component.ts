@@ -1,5 +1,6 @@
 /*
-List Page Template and Component
+Here is the component were we call Post Service methods and display it with 
+Create, Edit, Delete and View Buttons
 */
 
 // CommonModule -basic module that contains Angular Directives and pipes
@@ -44,7 +45,7 @@ export class IndexComponent {
   /**
    * Write the code
    *
-   * Delete Poat
+   * Delete the Post
    * **/
 
   deletePost(id: number) {

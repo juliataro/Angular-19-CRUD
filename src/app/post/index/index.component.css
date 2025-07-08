@@ -1,0 +1,18 @@
+.container {
+  margin-top: 100px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-success {
+  margin-bottom: 50px;
+}
+
+.btn-info {
+  margin-right: 10px;
+}
+.btn-primary {
+  margin-right: 10px;
+}

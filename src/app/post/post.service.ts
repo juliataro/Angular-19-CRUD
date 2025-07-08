@@ -10,6 +10,8 @@ import jasmine from "jasmine";
  Reusable class that holds logic 
  or data you want to share across components
 
+ it contains all methods
+
 we are using https://jsonplaceholder.typicode.com 
 web site api for now they provide to easily use. 
 */
@@ -45,12 +47,10 @@ export class PostService {
   you must inject it into the constructor.
 
   That’s how Angular’s Dependency Injection (DI) system works.
-
+-----------------------------------------------
   HttpClient is a service class, not a utility function.
-  It must be created by Angular, with all its dependencies 
-  resolved.
-  You ask for it in the constructor, and Angular’s 
-  Dependency Injection system gives you a ready-to-use instance.
+  It's used to interact with RESTful APIs by sending HTTP requests 
+  and receiving responses from a backend server
   --------------------------------------------
   --------------------------------------------*/
 

@@ -1,0 +1,28 @@
+.container {
+  margin-top: 100px;
+}
+
+.view-post {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-primary {
+  padding: 10px 32px;
+}
+
+.table {
+  margin-top: 50px;
+}
+
+table,
+th,
+td {
+  border: 1px solid gray;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+table tr:first-child th:first-child {
+  border-top-left-radius: 20px;
+}
